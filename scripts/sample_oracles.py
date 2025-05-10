@@ -1,0 +1,48 @@
+# sdeUSD DOESNT PRICE sdeUSD ITSELF
+CryptoFromPoolsVaultWAgg.deploy(
+	['0x5F6c431AC417f0f430B84A666a563FAbe681Da94', '0x4DEcE678ceceb27446b35C672dC7d61F30bAD69E'],
+	[1,0],
+	[0,1],
+	'0x5C5b196aBE0d54485975D1Ec29617D42D9198326',
+	'0x18672b1b0c623a30089A280Ed9256379fb0E4E62',
+	{'from': accounts[0]}
+)
+
+# wstETH
+StethFromPoolsVaultWAgg.deploy(
+	["0x21E27a5E5513D6e65C4f830167390997aA84843a", "0x7F86Bf177Dd4F3494b841a37e810A34dD56c829B", "0x4DEcE678ceceb27446b35C672dC7d61F30bAD69E"],
+	[0,0,1],
+	[1,2,0],
+	'0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0',
+	'0x18672b1b0c623a30089A280Ed9256379fb0E4E62',
+	{'from': accounts[0]}
+)
+
+#wstUSR
+CryptoFromPoolsVaultWAgg.deploy(
+	['0x3eE841F47947FEFbE510366E4bbb49e145484195', '0x4DEcE678ceceb27446b35C672dC7d61F30bAD69E'], # pools
+	[1,1], #borrowed
+	[0,0], #collateral
+	'0x1202F5C7b4B9E47a1A484E8B270be34dbbC75055', #vault
+	'0x18672b1b0c623a30089A280Ed9256379fb0E4E62', #agg
+	{'from': accounts[0]}
+)
+
+#USR
+CryptoFromPoolsWAgg.deploy(
+	['0x3eE841F47947FEFbE510366E4bbb49e145484195', '0x4DEcE678ceceb27446b35C672dC7d61F30bAD69E'], # pools
+	[1,1], #borrowed
+	[0,0], #collateral
+	'0x18672b1b0c623a30089A280Ed9256379fb0E4E62', #agg
+	{'from': accounts[0]}
+)
+
+#sdeUSD price oracle from sdeUSD pool itslef
+CryptoFromPoolsVaultWAgg.deploy(
+	['0x82202CAEC5E6d85014eADC68D4912F3C90093e7C', '0xff17dAb22F1E61078aBa2623c89cE6110E878B3c'], # pools
+	[0,1], #borrowed
+	[1,0], #collateral
+	'0x5C5b196aBE0d54485975D1Ec29617D42D9198326', #vault
+	'0x18672b1b0c623a30089A280Ed9256379fb0E4E62', #agg
+	{'from': accounts[0]}
+)
