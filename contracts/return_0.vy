@@ -7,8 +7,10 @@
 @external
 @view
 def price() -> uint256:
-    raise "Forced revert"
+    return 1128609365938736600
+    # raise "Forced revert"
 
 @external
 def price_w() -> uint256:
+    # raise "Forced revert"
     return 1

@@ -3,7 +3,8 @@
 @title CryptoFromPoolsVaultWAgg
 @notice Price oracle for chained pools (up to 8) combining crypto/crvUSD pricing and vault redemption rate.
         It also references aggregated USD, so works for mint markets.
-        Only suitable for vaults which cannot be affected by donation attack (like sFRAX)
+        Only suitable for vaults which cannot be affected by donation attack (like sFRAX).
+        Ensure vault and underlying are 18 decimals.
 @author Curve.Fi
 @license MIT
 """
